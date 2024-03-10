@@ -1,0 +1,68 @@
+const fs = require("fs");
+
+const addProducts = (req, res) => {
+  const { id, artist, album, price } = req.body;
+  const data = { id, artist, album, price };
+  let productos = [];
+  const productosString = fs.readFileSync("productos.json", "utf-8");
+  if (productosString) {
+    productos = JSON.parse(productosString);
+  }
+  productos.push(data);
+  const productosStringify = JSON.stringify(productos, null, 2);
+  fs.writeFileSync("productos.json", productosStringify);
+  res.send("producto creado con éxito");
+};
+
+const readProducts = (req, res) => {
+  const products = fs.readFileSync("productos.json", "utf-8");
+  const productsParse = JSON.parse(products);
+  res.send(productsParse);
+};
+
+const readProduct = (req, res) => {
+  const products = fs.readFileSync("productos.json", "utf-8");
+  const productsParse = JSON.parse(products);
+  const id = req.params.id;
+  const product = productsParse.filter((param) => param.id === id);
+  res.send(product);
+};
+
+const updateProduct = (req, res) => {
+  const products = fs.readFileSync("productos.json", "utf-8");
+  const productsParse = JSON.parse(products);
+  const params = req.params.id;
+  const { artist, album, price } = req.body;
+  const data = { artist, album, price };
+  const product = productsParse.map((product) => {
+    if (product.id === params) {
+      return {
+        ...product,
+        ...data,
+      };
+    } else {
+      return product;
+    }
+  });
+  const productosStringify = JSON.stringify(product, null, 2);
+  fs.writeFileSync("productos.json", productosStringify);
+  res.send("producto actualizado con éxito");
+};
+
+const deleteProduct = (req, res) => {
+  const products = fs.readFileSync("productos.json", "utf-8");
+  const productsParse = JSON.parse(products);
+  const id = req.params.id;
+  const deleteProduct = productsParse.filter((param) => param.id !== id);
+  const productosStringify = JSON.stringify(deleteProduct, null, 2);
+  fs.writeFileSync("productos.json", productosStringify);
+  res.send("producto eliminado con éxito");
+};
+
+module.exports = {
+  addProducts,
+  readProducts,
+  readProduct,
+  updateProduct,
+  deleteProduct,
+};

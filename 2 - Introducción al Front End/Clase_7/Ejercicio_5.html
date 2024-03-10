@@ -1,0 +1,52 @@
+<!-- Ejercicios de Flexbox
+A continuación se presentan cinco ejercicios prácticos para practicar y repasar los conceptos de Flexbox.
+Estos ejercicios están diseñados para ayudar a los alumnos a familiarizarse con las propiedades y técnicas de Flexbox mientras construyen diseños flexibles y responsivos.
+
+Ejercicio 5: Diseño responsivo
+Crea un contenedor flex con dos elementos secundarios (divs) dentro.
+Configura el diseño para que los elementos secundarios se apilen verticalmente en pantallas pequeñas (menos de 768px de ancho) y se muestren en una fila en pantallas más grandes.
+Asegúrate de que los elementos secundarios se ajusten automáticamente al ancho del contenedor en ambos casos. -->
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio_5</title>
+  </head>
+  <body>
+    <div class="contenedor">
+      <div class="item">Elemento 1</div>
+      <div class="item">Elemento 2</div>
+    </div>
+  </body>
+</html>
+<style>
+  body {
+    box-sizing: border-box;
+  }
+  .contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    color: black;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    gap: 10px;
+  }
+  .item {
+    padding: 20px;
+    margin: 20px;
+    flex-basis: 100%;
+    background-color: aqua;
+    text-align: center;
+    border-radius: 1rem;
+  }
+  @media (min-width: 768px) {
+    .contenedor {
+      display: flex;
+      width: 100%;
+      flex-wrap: nowrap;
+    }
+  }
+</style>

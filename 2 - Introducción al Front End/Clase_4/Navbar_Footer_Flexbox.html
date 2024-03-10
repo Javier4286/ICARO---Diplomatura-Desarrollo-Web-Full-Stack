@@ -1,0 +1,94 @@
+<!-- Ejemplos prácticos
+Navbar y Footer con Flexbox
+Ejemplo de estilos de una barra de navegación -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Navbar_Footer_Flexbox</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="#" class="navbar__logo">Logo</a>
+      <ul class="navbar__menu">
+        <li class="navbar__item">
+          <a href="#" class="navbar__link">Inicio</a>
+        </li>
+        <li class="navbar__item">
+          <a href="#" class="navbar__link">Acerca</a>
+        </li>
+        <li class="navbar__item">
+          <a href="#" class="navbar__link">Servicios</a>
+        </li>
+        <li class="navbar__item">
+          <a href="#" class="navbar__link">Contacto</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="content">
+      <h1>Bienvenido</h1>
+      <p>Contenido de la página...</p>
+    </div>
+    <footer class="footer">
+      <p>© 2023 - Todos los derechos reservados</p>
+    </footer>
+  </body>
+</html>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+  }
+  .navbar__logo {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+  }
+  .navbar__menu {
+    display: flex;
+    list-style: none;
+  }
+  .navbar__item {
+    margin-right: 10px;
+  }
+  .navbar__link {
+    color: white;
+    text-decoration: none;
+  }
+  .content {
+    padding: 20px;
+  }
+  h1 {
+    font-size: 32px;
+  }
+  p {
+    font-size: 16px;
+  }
+  .footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+</style>
+
+<!-- En este ejemplo, hemos creado un navbar utilizando Flexbox. La barra de navegación (nav.navbar) utiliza display: flex para alinear los elementos horizontalmente y justify-content: space-between para distribuirlos de manera equitativa en el espacio disponible. Los enlaces del menú (ul.navbarmenu y li.navbaritem) se muestran en línea y se les da un margen derecho para separarlos.
+
+El estilo general del navbar incluye un fondo de color de fondo (background-color: #333) y texto blanco (color: white). Los estilos de fuente y espaciado se definen para el logo (a.navbarlogo) y los enlaces (a.navbarlink).
+
+En el contenido de la página (div.content), se han aplicado estilos básicos para el título (h1) y el párrafo (p).
+
+El footer (footer.footer) utiliza estilos similares al navbar, incluyendo un fondo de color de fondo (background-color: #333), texto blanco (color: white) y un área de padding (padding: 10px) para separarlo del contenido.
+
+Recuerda vincular el archivo CSS (styles.css) al archivo HTML para que se apliquen los estilos correctamente.
+
+Este es solo un ejemplo básico de cómo se pueden crear un navbar y un footer utilizando Flexbox. Puedes personalizar los estilos y la disposición según tus necesidades. -->

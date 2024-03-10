@@ -1,0 +1,56 @@
+<!-- Ejercicios de Flexbox
+A continuación se presentan cinco ejercicios prácticos para practicar y repasar los conceptos de Flexbox.
+Estos ejercicios están diseñados para ayudar a los alumnos a familiarizarse con las propiedades y técnicas de Flexbox mientras construyen diseños flexibles y responsivos.
+
+Ejercicio 4: Orden de los elementos
+Crea un contenedor flex con cinco elementos secundarios (divs) dentro.
+Cambia el orden de los elementos secundarios de manera que aparezcan en un orden diferente al que están en el marcado HTML. -->
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio_4</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="divs">Elemento 1</div>
+      <div class="divs">Elemento 2</div>
+      <div class="divs">Elemento 3</div>
+      <div class="divs">Elemento 4</div>
+      <div class="divs">Elemento 5</div>
+    </div>
+  </body>
+</html>
+<style>
+  .container {
+    display: flex;
+    gap: 1rem;
+  }
+  .divs {
+    display: flex;
+    height: 3.125rem;
+    width: 6.25rem;
+    background-color: #e0e0e0;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+  }
+  .divs:nth-child(1) {
+    order: 2;
+  }
+  .divs:nth-child(2) {
+    order: 0;
+  }
+  .divs:nth-child(3) {
+    order: 4;
+  }
+  .divs:nth-child(4) {
+    order: 1;
+  }
+  .divs:nth-child(5) {
+    order: 3;
+  }
+</style>

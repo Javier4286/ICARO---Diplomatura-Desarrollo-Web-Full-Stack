@@ -1,0 +1,50 @@
+<!-- Ejercicios de Flexbox
+A continuación se presentan cinco ejercicios prácticos para practicar y repasar los conceptos de Flexbox.
+Estos ejercicios están diseñados para ayudar a los alumnos a familiarizarse con las propiedades y técnicas de Flexbox mientras construyen diseños flexibles y responsivos.
+
+Ejercicio 3: Diseño flexible
+Crea un contenedor flex con tres elementos secundarios (divs) dentro.
+Haz que el primer elemento secundario ocupe el 30% del ancho total del contenedor.
+Haz que el segundo elemento secundario ocupe el 50% del ancho total del contenedor.
+Haz que el tercer elemento secundario ocupe el 20% del ancho total del contenedor. -->
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio_3</title>
+  </head>
+  <body>
+    <div>Elemento 1</div>
+    <div>Elemento 2</div>
+    <div>Elemento 3</div>
+  </body>
+</html>
+<style>
+  body {
+    display: flex;
+    height: 300px;
+    /* justify-content: center; */
+    align-items: center;
+  }
+  div {
+    background-color: #e0e0e0;
+    flex: 0 1 auto;
+    padding: 20px;
+    margin: 10px;
+  }
+  div:nth-child(1) {
+    /* width: 30%; */
+    flex-basis: 30%;
+  }
+  div:nth-child(2) {
+    /* width: 50%; */
+    flex-basis: 50%;
+  }
+  div:nth-child(3) {
+    /* width: 20%; */
+    flex-basis: 20%;
+  }
+</style>

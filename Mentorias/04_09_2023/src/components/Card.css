@@ -1,0 +1,22 @@
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardImg {
+  width: 350px;
+  height: 350px;
+  border-radius: 5px;
+}
+
+.cardBtns {
+  display: flex;
+}
+
+.cardBtns button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  justify-content: baseline;
+  width: auto;
+}

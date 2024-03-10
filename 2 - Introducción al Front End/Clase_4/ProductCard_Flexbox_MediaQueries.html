@@ -1,0 +1,68 @@
+<!-- Ejemplo de Cards de Productos con Flexbox y Media Queries
+Aquí tienes un ejemplo de cómo colocar 3 cards de productos utilizando Flexbox y Media Queries para hacerlos responsivos: -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ProductCard_Flexbox_MediaQueries</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <img src="https://placehold.co/600x400" alt="Producto 1" />
+        <h3>Producto 1</h3>
+        <p>Descripción del Producto 1.</p>
+      </div>
+      <div class="card">
+        <img src="https://placehold.co/600x400" alt="Producto 2" />
+        <h3>Producto 2</h3>
+        <p>Descripción del Producto 2.</p>
+      </div>
+      <div class="card">
+        <img src="https://placehold.co/600x400" alt="Producto 3" />
+        <h3>Producto 3</h3>
+        <p>Descripción del Producto 3.</p>
+      </div>
+    </div>
+  </body>
+</html>
+<style>
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .card {
+    flex-basis: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    box-sizing: border-box;
+  }
+  .card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  @media screen and (max-width: 768px) {
+    .card {
+      flex-basis: calc(50% - 20px);
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .card {
+      flex-basis: 100%;
+    }
+  }
+</style>
+
+<!-- En este ejemplo, hemos creado un contenedor (div.container) que utiliza Flexbox para alinear las 3 cards de productos. Las cards (div.card) tienen un ancho flexible utilizando flex-basis y se les aplica un margen inferior (margin-bottom) y un espaciado interno (padding).
+
+Las imágenes de los productos (img) se ajustan automáticamente utilizando un ancho del 100% y una altura automática.
+
+Hemos agregado media queries para hacer que las cards sean responsivas en diferentes tamaños de pantalla. En una pantalla con un ancho máximo de 768px, las cards se ajustarán a un ancho del 50% del contenedor (flex-basis: calc(50% - 20px)). En una pantalla con un ancho máximo de 480px, las cards se ajustarán a un ancho del 100% del contenedor (flex-basis: 100%).
+
+Recuerda reemplazar las imágenes de ejemplo (product1.jpg, product2.jpg, product3.jpg) con las imágenes reales de los productos.
+
+Este es solo un ejemplo básico de cómo utilizar Flexbox y Media Queries para crear cards de productos responsivos. Puedes personalizar los estilos y la disposición según tus necesidades y agregar más detalles a las cards según tus requisitos de diseño. -->

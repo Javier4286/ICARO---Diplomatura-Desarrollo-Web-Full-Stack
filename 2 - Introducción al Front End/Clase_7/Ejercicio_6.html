@@ -1,0 +1,63 @@
+<!-- Ejercicios de Flexbox
+A continuación se presentan cinco ejercicios prácticos para practicar y repasar los conceptos de Flexbox.
+Estos ejercicios están diseñados para ayudar a los alumnos a familiarizarse con las propiedades y técnicas de Flexbox mientras construyen diseños flexibles y responsivos.
+
+Ejercicio 6: Diseño de galería de imágenes
+Crea un contenedor flex con varios elementos secundarios (divs) dentro.
+Configura el diseño para que los elementos secundarios se muestren en una cuadrícula de 3 columnas.
+Asegúrate de que los elementos secundarios tengan una altura fija y se ajusten automáticamente al ancho del contenedor. -->
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio_6</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="elements">
+        <img src="https://placehold.co/600x400" alt="600x400" />
+      </div>
+      <div class="elements">
+        <img src="https://placehold.co/400x600" alt="400x600" />
+      </div>
+      <div class="elements">
+        <img src="https://placehold.co/200x800" alt="200x800" />
+      </div>
+      <div class="elements">
+        <img src="https://placehold.co/700x350" alt="700x350" />
+      </div>
+      <div class="elements">
+        <img src="https://placehold.co/600x400" alt="600x400" />
+      </div>
+      <div class="elements">
+        <img src="https://placehold.co/400x600" alt="400x600" />
+      </div>
+    </div>
+  </body>
+</html>
+<style>
+  .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100vh;
+    gap: 1rem;
+  }
+  .elements {
+    flex: 0 0 calc(30% - 20px);
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .elements img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+  }
+</style>

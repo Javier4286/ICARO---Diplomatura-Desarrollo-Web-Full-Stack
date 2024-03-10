@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Productos</title>
+  </head>
+  <body>
+    <h1>Productos</h1>
+    <p>Esta es la pagina de productos</p>
+    <section>
+      <% productos.forEach(function (prod, index) { %>
+      <article>
+        <h1>Producto <%= index+1 %></h1>
+        <ul>
+          <li>Nombre: <%= prod.nombre %></li>
+          <li>Precio: <%= prod.precio %></li>
+        </ul>
+      </article>
+      <% }) %>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form</title>
+  </head>
+  <body>
+    <form action="/usuario" method="post">
+      <label for="name">Nombre</label>
+      <input
+        type="text"
+        id="nombre"
+        name="nombre"
+        placeholder="ingrese nombre"
+      />
+      <label for="price">Precio</label>
+      <input
+        type="number"
+        id="precio"
+        name="precio"
+        placeholder="ingrese precio"
+      />
+      <button type="submit">Crear</button>
+    </form>
+  </body>
+</html>
+<style>
+  body form input[placeholder] {
+    font-style: oblique;
+  }
+</style>

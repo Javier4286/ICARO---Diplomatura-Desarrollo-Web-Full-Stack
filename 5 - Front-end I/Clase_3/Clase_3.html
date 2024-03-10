@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clase_3</title>
+  </head>
+  <body>
+    <form action="" id="form">
+      <h1>Bienvenidos!</h1>
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" name="Nombre" placeholder="Ingrese nombre" />
+      <label for="surname">Apellido:</label>
+      <input
+        type="text"
+        id="surname"
+        name="Apellido"
+        placeholder="Ingrese apellido"
+      />
+      <label for="genre">Genero:</label>
+      <select name="Genero" id="select-options">
+        <option value="">Seleccione genero</option>
+        <option value="Femenino">Femenino</option>
+        <option value="Masculino">Masculino</option>
+      </select>
+      <button type="submit">Enviar</button>
+    </form>
+    <section id="usuarios"></section>
+  </body>
+  <script src="/Clase_3.js"></script>
+</html>
+<style>
+  html {
+    display: flex;
+    height: 75%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  form ::placeholder {
+    font-style: italic;
+  }
+</style>

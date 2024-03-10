@@ -1,0 +1,42 @@
+<!-- Ejercicios de Práctica: Manipulación del DOM y Manejo de Eventos
+
+2. Evitar la propagación del evento en un elemento padre
+
+Consigna:
+Tienes tres elementos anidados: un abuelo, un padre y un nieto. El objetivo es que, al hacer clic en el padre, se muestre un mensaje en la consola, pero este clic no debe afectar al abuelo. Si haces clic en el nieto, se debe mostrar otro mensaje, y si haces clic en el abuelo, un tercer mensaje.
+
+Pistas:
+Utiliza el método querySelector para seleccionar cada elemento.
+Agrega un evento "click" a cada elemento.
+Utiliza event.stopPropagation() en el padre para evitar que el evento se propague al abuelo. -->
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio_2</title>
+  </head>
+  <body>
+    <div id="grandfatherMessages">
+      <h1>Grandfather</h1>
+      <div id="fatherMessages">
+        <h2>Father</h2>
+        <div id="grandsonMessages">
+          <h3>Grandson</h3>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="/Ejercicio_2.js"></script>
+</html>
+<style>
+  html {
+    display: flex;
+    height: 75%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+</style>

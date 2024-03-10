@@ -1,0 +1,39 @@
+<!-- Ejercicios de Práctica: Manipulación del DOM y Manejo de Eventos
+
+1. Mostrar información del producto al pasar el mouse
+
+Consigna:
+Dentro de un elemento <article>, tienes un título, un precio y un botón. El objetivo es mostrar los detalles del producto (su precio) en un alerta cuando el usuario pase el mouse sobre el botón "Ver Detalles".
+
+Pistas:
+Utiliza el método querySelector para seleccionar el botón dentro del <article>.
+Agrega un evento "mouseover" al botón.
+Utiliza parentNode para acceder al nodo padre del botón y querySelector para obtener el precio del producto.
+Usa alert para mostrar el precio. -->
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio_1</title>
+  </head>
+  <body>
+    <article id="articulo">
+      <h1>Ramones: Greatest Hits Live</h1>
+      <p>$2000</p>
+      <button>Ver Detalles</button>
+    </article>
+    <script src="/Ejercicio_1.js"></script>
+  </body>
+</html>
+<style>
+  html {
+    display: flex;
+    height: 75%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+</style>

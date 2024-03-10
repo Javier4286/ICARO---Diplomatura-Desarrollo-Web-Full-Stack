@@ -1,0 +1,110 @@
+<!-- Continuación ejercicios de Flexbox
+
+Ejercicio 9: Diseño de formulario de registro con estilos personalizados
+
+Crea una tarjeta con un fondo de imagen y un ancho máximo de 500px.
+Dentro de la tarjeta, crea un formulario de registro con los siguientes campos: nombre, correo electrónico, contraseña y confirmación de contraseña.
+Utiliza Flexbox para organizar los campos en dos columnas en pantallas más grandes (min-width: 768px), y en una columna en pantallas más pequeñas.
+Ajusta el espaciado y la alineación para que los campos estén bien distribuidos en ambas columnas.
+Estiliza los campos de entrada y los botones con Flexbox para que se ajusten correctamente y aplica estilos personalizados como bordes, sombras y colores. -->
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio_9</title>
+  </head>
+  <body class="container">
+    <section class="card">
+      <form action="">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" required id="nombre" />
+          </div>
+          <div class="form-group">
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" name="correo" required id="correo" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="contraseña">Contraseña:</label>
+            <input type="password" name="contraseña" required id="contraseña" />
+          </div>
+          <div class="form-group">
+            <label for="confirmación_contraseña">Confirmar contraseña:</label>
+            <input
+              type="password"
+              name="confirmación_contraseña"
+              required
+              id="Confirmar contraseña"
+            />
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="submit" />
+        </div>
+      </form>
+    </section>
+  </body>
+</html>
+<style>
+  body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: white;
+  }
+  .card {
+    max-width: 500px;
+    background-color: #276fbf;
+    border-radius: 15px;
+    width: 100%;
+    padding: 20px;
+  }
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  .form-group input {
+    border-radius: 5px;
+    padding: 10px;
+  }
+  .form-group input[type="submit"] {
+    background-color: #c0343d;
+    padding: 10px 20px;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .form-group input[type="submit"]:hover {
+    background-color: #a02c35;
+  }
+  @media (min-width: 768px) {
+    .form-row {
+      display: flex;
+      justify-content: space-between;
+    }
+    .form-group {
+      flex-basis: 48%;
+    }
+  }
+</style>

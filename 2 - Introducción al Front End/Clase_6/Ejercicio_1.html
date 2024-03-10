@@ -1,0 +1,41 @@
+<!-- Ejercicios de Flexbox
+A continuación se presentan cinco ejercicios prácticos para practicar y repasar los conceptos de Flexbox. Estos ejercicios están diseñados para ayudar a los alumnos a familiarizarse con las propiedades y técnicas de Flexbox mientras construyen diseños flexibles y responsivos.
+
+Ejercicio 1: Alineación de elementos
+Crea un contenedor flex con cuatro elementos secundarios (divs) dentro.
+Aplica una alineación horizontal al contenedor para que los elementos secundarios se distribuyan equitativamente a lo largo del eje principal. Aplica una alineación vertical al contenedor para que los elementos secundarios se alineen al centro verticalmente. -->
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio_1</title>
+  </head>
+  <body>
+    <div>DIV 1</div>
+    <div>DIV 2</div>
+    <div>DIV 3</div>
+    <div>DIV 4</div>
+  </body>
+</html>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10rem;
+    height: 10rem;
+    background-color: red;
+    color: aliceblue;
+    font-size: 2.5rem;
+  }
+</style>

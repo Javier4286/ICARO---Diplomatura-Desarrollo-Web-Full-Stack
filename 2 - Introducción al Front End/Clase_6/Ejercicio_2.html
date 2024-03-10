@@ -1,0 +1,52 @@
+<!-- Ejercicios de Flexbox
+A continuación se presentan cinco ejercicios prácticos para practicar y repasar los conceptos de Flexbox.
+Estos ejercicios están diseñados para ayudar a los alumnos a familiarizarse con las propiedades y técnicas de Flexbox mientras construyen diseños flexibles y responsivos.
+
+Ejercicio 2: Diseño de cuadrícula
+Crea un contenedor flex con varios elementos secundarios (divs) dentro.
+Configura el contenedor para que se comporte como una cuadrícula con tres columnas.
+Ajusta el espacio entre las columnas y las filas para que haya un margen uniforme alrededor de cada elemento secundario. -->
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio_2</title>
+  </head>
+  <body>
+    <div>Elemento 1</div>
+    <div>Elemento 2</div>
+    <div>Elemento 3</div>
+    <div>Elemento 4</div>
+    <div>Elemento 5</div>
+    <div>Elemento 6</div>
+  </body>
+  <style>
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    }
+    body {
+      display: flex;
+      background-color: #ff9696;
+      gap: 0.625rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      height: 100vh;
+      align-items: center;
+    }
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30rem;
+      height: 5rem;
+      background-color: #897f7f;
+    }
+  </style>
+</html>

@@ -1,0 +1,135 @@
+:root,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  list-style: none;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.25rem;
+}
+.header img {
+  height: 4.688rem;
+  width: 4.688rem;
+}
+.header img:nth-child(2) {
+  height: 2.188rem;
+  width: 2.188rem;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  align-items: center;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 18.688rem;
+  height: 30.875rem;
+  background-color: rgba(187, 243, 255, 1);
+  border-radius: 0.938rem;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0.938rem;
+  gap: 2.25rem;
+}
+.form-group input[type="email"],
+[type="password"],
+[type="text"],
+[type="date"] {
+  width: 14.188rem;
+  height: 2.375rem;
+  border-radius: 0.938rem;
+  gap: 3.125rem;
+  border: none;
+}
+.form-group input[type]::placeholder {
+  padding: 0.5rem;
+}
+.form-group input[type="submit"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1.688rem;
+  width: 6.375rem;
+  border-radius: 0.938rem;
+  background-color: white;
+  cursor: pointer;
+  border: none;
+}
+.form-group input[type="submit"]:hover {
+  background-color: floralwhite;
+}
+.form-group div a {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+a:visited {
+  color: black;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 171, 237, 1);
+}
+.footer_1 img {
+  width: 5.063rem;
+  height: 6.25rem;
+}
+.footer_1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.footer_2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  gap: 2rem;
+}
+.footer_2 a img {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.footer_3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer_3 li {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+@media (min-width: 600px) {
+  .footer_2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 11.5rem;
+  }
+  .footer_3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-right: 7.5rem;
+    padding-bottom: 1.5rem;
+    gap: 7.5rem;
+  }
+}

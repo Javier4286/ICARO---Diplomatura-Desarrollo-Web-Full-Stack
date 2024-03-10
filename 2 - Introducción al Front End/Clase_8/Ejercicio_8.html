@@ -1,0 +1,83 @@
+<!-- Continuación ejercicios de Flexbox
+
+Ejercicio 8: Formulario básico en una tarjeta
+
+Crea una tarjeta con un fondo de color y un ancho máximo de 400px.
+Dentro de la tarjeta, crea un formulario con los siguientes campos: nombre, correo electrónico y mensaje.
+Utiliza Flexbox para alinear los campos verticalmente.
+Asegúrate de que los campos ocupen el ancho completo del formulario.
+Estiliza los campos de entrada y los botones con Flexbox para que se ajusten correctamente. -->
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio_8</title>
+  </head>
+  <body class="container">
+    <section class="card">
+      <form action="">
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" name="nombre" required id="nombre" />
+          <label for="correo">Correo electrónico</label>
+          <input type="email" required name="correo" id="correo" />
+          <label for="mensaje">Mensaje</label>
+          <textarea name="mensaje" id="mensaje" cols="30" rows="10">
+hola</textarea
+          >
+          <input type="submit" name="Enviar" value="Enviar" />
+        </div>
+      </form>
+    </section>
+  </body>
+</html>
+<style>
+  body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+  }
+  .card {
+    padding: 20px;
+    background-color: #276fbf;
+    max-width: 400px;
+    border-radius: 15px;
+    width: 100%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  }
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+    font-weight: bolder;
+    gap: 0.5rem;
+  }
+  .form-group input,
+  textarea {
+    border-radius: 0.25rem;
+    padding: 10px;
+  }
+  .form-group input[type="submit"] {
+    background-color: red;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    font-weight: bolder;
+    cursor: pointer;
+    border: none;
+    padding: 10px 20px;
+  }
+  .form-group input[type="submit"]:hover {
+    background-color: #a02c35;
+  }
+</style>

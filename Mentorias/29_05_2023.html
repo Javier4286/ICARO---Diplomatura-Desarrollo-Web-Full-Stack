@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>29_05_2023</title>
+  </head>
+  <body>
+    <div class="algo1">
+      <h1>Compañia Portales</h1>
+      <h2>ELIGE UNA CATEGORÍA</h2>
+    </div>
+    <article class="algo2">
+      <h3>Impresiones</h3>
+      <h3>Monitores</h3>
+      <h3>Auriculares</h3>
+      <h3>Almacenamiento</h3>
+      <h3>Procesadores</h3>
+      <h3>Mouse</h3>
+    </article>
+    <div>
+      <section class="algo3">
+        <h4>Instagram</h4>
+        <h4>Facebook</h4>
+        <h4>Twitter</h4>
+      </section>
+    </div>
+  </body>
+</html>
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    background-color: azure;
+  }
+  .algo1 {
+    justify-content: center;
+    text-align: center;
+  }
+  .algo2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: aliceblue;
+    gap: 3rem;
+  }
+  .algo2 h3 {
+    display: flex;
+    background-color: black;
+    height: 250px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+  .algo3 {
+    justify-content: space-around;
+    text-align: center;
+  }
+  @media (min-width: 768px) {
+    .algo2 {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    .algo2 h3 {
+      width: 25%;
+    }
+  }
+</style>

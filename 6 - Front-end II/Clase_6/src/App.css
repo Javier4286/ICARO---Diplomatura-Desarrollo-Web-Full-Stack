@@ -1,0 +1,22 @@
+body {
+  background-color: white;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: black;
+  width: 150px;
+}
+.card img {
+  height: 200px;
+  width: 150px;
+}
+.card button {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: cornflowerblue;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}

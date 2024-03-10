@@ -1,0 +1,43 @@
+body {
+  background-color: beige;
+}
+.section_main {
+  background-color: burlywood;
+}
+.h1 {
+  color: black;
+  font-size: large;
+  text-align: center;
+}
+.navbar {
+  background-color: rgb(207, 224, 255);
+  border-bottom: 1px solid rgba(5, 110, 215, 0.267);
+}
+p {
+  color: black;
+  font-size: medium;
+  text-align: center;
+}
+.titulo {
+  color: black;
+}
+.Boton {
+  color: rgb(6, 6, 6);
+  background-color: rgb(225, 231, 138);
+  font-size: large;
+  padding: 1;
+  border: 0ch;
+  margin: 0%;
+}
+.Boton_Secundario {
+  color: rgb(5, 5, 5);
+  background-color: rgb(29, 239, 50);
+  font-size: large;
+}
+li {
+  text-align: center;
+}
+.footer_end {
+  background-color: rgb(212, 231, 178);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
